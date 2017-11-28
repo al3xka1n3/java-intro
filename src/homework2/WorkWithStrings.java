@@ -5,13 +5,13 @@ package homework2;
  */
 public class WorkWithStrings {
     public static void main(String[] args) {
-        String str = "Hello World!";
+        String str = "Hello World! ";
 
         System.out.println(str.charAt(2));
-        System.out.println(str.concat(" Yes!"));
-        System.out.println(str.endsWith("d!"));
-        System.out.println(str.equals("hello world!"));
-        System.out.println(str.equalsIgnoreCase("hello world!"));
+        System.out.println(str.concat("Yes!"));
+        System.out.println(str.endsWith("d! "));
+        System.out.println(str.equals("hello world! "));
+        System.out.println(str.equalsIgnoreCase("hello world! "));
         System.out.println(str.indexOf('l'));
         System.out.println(str.indexOf("Wo"));
         System.out.println(str.lastIndexOf('l'));
