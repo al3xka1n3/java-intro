@@ -20,8 +20,14 @@ public class NameCollection {
             add("Oleg");
         }};
 
-        nameList.remove("John");
-        isExist(nameList, "John");
+        String nameToDelete = "John";
+        nameList.remove(nameToDelete);
+
+        if(!nameList.contains(nameToDelete)) {
+            System.out.println(nameToDelete + " is absent in a list");
+        } else {
+            System.out.println(nameToDelete + " is present in a list");
+        }
 
         Iterator<String> iteratorBeforeSort = nameList.iterator();
         System.out.println("Before sorting: ");
@@ -36,19 +42,5 @@ public class NameCollection {
         while (iteratorAfterSort.hasNext()) {
             System.out.println(iteratorAfterSort.next());
         }
-
     }
-
-    private static void isExist(List<String> nameList, String verifiableName) {
-        int exist = 0;
-
-        for (String name : nameList) {
-            if (name.contains(verifiableName)) exist++;
-        }
-
-        if (exist == 0) System.out.println(verifiableName + "is absent in a list");
-        else System.out.println(verifiableName + "is present in a list");
-    }
-
-
 }
